@@ -1,0 +1,27 @@
+#tela {
+    width: 500px;
+    height: 400px;
+    background-color: rgb(216, 191, 52);
+    border-radius: 15%;
+}
+#first_res {
+    margin-top: 10px;
+    margin-left: 33%;
+    border-radius: 40%;
+    width: 70px;
+    height: 50px;
+}
+#second_res {
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 40%;
+    width: 70px;
+    height: 50px;
+}
+#titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: medium;
+    text-align: center;
+    margin-top: 10px;
+}
