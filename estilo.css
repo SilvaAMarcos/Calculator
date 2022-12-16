@@ -1,27 +1,45 @@
-#tela {
-    width: 500px;
-    height: 400px;
-    background-color: rgb(216, 191, 52);
-    border-radius: 15%;
+.calc{
+    /* margin-top:  -10px; */
+    background-color: rgba(8, 0, 0, 0.651);
+    height: 375px;
+    width: 450px;
+    border-radius: 10px;
+
 }
-#first_res {
-    margin-top: 10px;
-    margin-left: 33%;
-    border-radius: 40%;
-    width: 70px;
+
+.tela{
+    /* margin-top: 10px; */
+    /* width: 400px; */
+    display: flex;
+    justify-content: center;
+    height: 70px;
+}
+.tela > input{
+    width: 350px;
     height: 50px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;   
 }
-#second_res {
+
+.meubutao {
+    border-radius: 4px;
     margin-top: 10px;
-    margin-left: 20px;
-    border-radius: 40%;
-    width: 70px;
-    height: 50px;
+    margin-left: 10px;
+    align-items: center;
+    /* display: flex;
+    justify-content: center; */
+    width: 430px;
+    height: 285px;
+    background-color: rgba(165, 165, 165, 0.973);
+
 }
-#titulo {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-size: medium;
-    text-align: center;
-    margin-top: 10px;
+button {
+    border: 6px;
+    border-radius: 4px;
+    margin-top: 9px;
+    height: 46px;
+    width: 90px;
+    margin-left: 10px;
+    margin-right: 1px;
 }
