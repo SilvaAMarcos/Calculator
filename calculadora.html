@@ -14,17 +14,18 @@
 
     <div class="calc">
         <div class="tela">
-            <input id="visor" type="text">
+            <!-- <input id="visor" type="text"> -->
+            <p id="visor"></p>
         </div>
         <div class="meubutao">
             <button id="b%" onclick="clickbotao(this.value);"value="%">%</button>
-            <button id="bce">CE</button>
-            <button id="bc">C</button>
+            <button id="bce" onclick="limpa(this.value);"value="CE">CE</button>
+            <button id="bc" onclick="limpa(this.value);"value="C">C</button>
             <button id="bapaga"><-</button>
             <button id="b7" onclick="clickbotao(this.value);"value="7">7</button>
             <button id="b8" onclick="clickbotao(this.value);"value="8">8</button>
             <button id="b9" onclick="clickbotao(this.value);"value="9">9</button>
-            <button id="bx">X</button>
+            <button id="bx">*</button>
             <button id="b4" onclick="clickbotao(this.value);"value="4">4</button>
             <button id="b5" onclick="clickbotao(this.value);"value="5">5</button>
             <button id="b6" onclick="clickbotao(this.value);"value="6">6</button>
@@ -35,7 +36,7 @@
             <button id="b+">+</button>
             <button id="b0" onclick="clickbotao(this.value);"value="0">0</button>
             <button id="b,">,</button>
-            <button onclick="log()">Log</button>
+            <button onclick="telavisao()">Log</button>
             <button id="b=" onclick="clickbotao(this.value);"value="=">=</button>
         </div>
     </div>
