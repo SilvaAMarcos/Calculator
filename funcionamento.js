@@ -1,17 +1,31 @@
 // let exibe = document.querySelector(".visor");
-let res = 0
+let res = ""
+let res1 = ""
+let operador = ""
 
-function limpa(){
-document.getElementById("visor").innerHTML = "";
-res = ""
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+async function limpa(){
+    res = ""
+    res1 = ""
+    document.getElementById("visor").innerHTML = "Apagando...";
+    await sleep(1000);
+    document.getElementById("visor").innerHTML = "";
+
 
 }
 
-function telavisao() {
+function telavisao() {    // Botão LOG é uma brincadeira interna rsrsrs
     document.getElementById("visor").innerHTML = "MEU LORO PARAGUAIO";
   }
 
 function clickbotao(clicar) {
+                    // Condição dos Botões numéricos
+
     if (clicar == 0){
         b0 = 0 ;
         res = res + 0
@@ -52,9 +66,30 @@ function clickbotao(clicar) {
         b9 = 9;
         res = res + b9
         document.getElementById("visor").innerHTML = res;}
-    if (clicar == "=") {
-        document.getElementById("visor").innerHTML = res;
-    } else {
+    if (clicar == ",") {
+        bdecimal = ",";
+        res = res + bdecimal
+        document.getElementById("visor").innerHTML = res;}
 
+
+                        // Condição dos Operadores
+    if (clicar == "+") {
+        operador = "+"
+        res1 = Number(Number(res) + Number(res1));
+        res = ""
+        document.getElementById("visor").innerHTML = "";
     }
+    if (clicar == "-") {
+        operador = "-"
+        res1 = (Number(res1) - Number(res));
+        res = ""
+        document.getElementById("visor").innerHTML = "";
+        alert(res1);
+        
+    }
+    if (clicar == "=") {
+        document.getElementById("visor").innerHTML = res1;
+    }
+
+
 }
