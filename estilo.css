@@ -1,6 +1,6 @@
 .calc{
     /* margin-top:  -10px; */
-    background-color: rgba(8, 0, 0, 0.651);
+    background-color: rgba(8, 0, 0, 0.425);
     height: 375px;
     width: 450px;
     border-radius: 10px;
@@ -15,7 +15,8 @@
     height: 70px;
 }
 .tela > p{
-    background-color: #fff;
+    font-size: 26px;
+    background-color: rgba(221, 217, 217, 0.979);
     width: 350px;
     height: 50px;
     margin-top: 15px;
@@ -42,7 +43,7 @@
     background-color: rgba(165, 165, 165, 0.973);
 
 }
-button {
+.number {
     border: 6px;
     border-radius: 4px;
     margin-top: 9px;
@@ -50,4 +51,26 @@ button {
     width: 90px;
     margin-left: 10px;
     margin-right: 1px;
+    background-color: rgb(225, 238, 250);
+}
+
+.operador {
+    border: 6px;
+    border-radius: 4px;
+    margin-top: 9px;
+    height: 46px;
+    width: 90px;
+    margin-left: 10px;
+    margin-right: 1px;
+    background-color: rgba(195, 240, 225, 0.938);
+}
+.func {
+    border: 6px;
+    border-radius: 4px;
+    margin-top: 9px;
+    height: 46px;
+    width: 90px;
+    margin-left: 10px;
+    margin-right: 1px;
+    background-color: rgb(247, 207, 169);
 }

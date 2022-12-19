@@ -1,19 +1,20 @@
 // let exibe = document.querySelector(".visor");
 let res = ""
-let res1 = ""
-let operador = ""
+let resoperador = 0
+let resfinal = 0
 
 
-function sleep(ms) {
+function sleep(ms) {    // Função que chama o sleep
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 
 async function limpa(){
     res = ""
-    res1 = ""
+    resoperador = ""
+    operador = ""
     document.getElementById("visor").innerHTML = "Apagando...";
-    await sleep(1000);
+    await sleep(1000);  // Chama a função sleep por meio do await
     document.getElementById("visor").innerHTML = "";
 
 
@@ -23,7 +24,7 @@ function telavisao() {    // Botão LOG é uma brincadeira interna rsrsrs
     document.getElementById("visor").innerHTML = "MEU LORO PARAGUAIO";
   }
 
-function clickbotao(clicar) {
+function numericos(clicar) {
                     // Condição dos Botões numéricos
 
     if (clicar == 0){
@@ -73,23 +74,66 @@ function clickbotao(clicar) {
 
 
                         // Condição dos Operadores
-    if (clicar == "+") {
-        operador = "+"
-        res1 = Number(Number(res) + Number(res1));
-        res = ""
-        document.getElementById("visor").innerHTML = "";
-    }
-    if (clicar == "-") {
-        operador = "-"
-        res1 = (Number(res1) - Number(res));
-        res = ""
-        document.getElementById("visor").innerHTML = "";
-        alert(res1);
+    // if (clicar == "+") {
+    //     operador = "+"
+    //     res1 = Number(Number(res) + Number(res1));
+    //     res = ""
+    //     document.getElementById("visor").innerHTML = "";
+    // }
+    // if (clicar == "-") {
+    //     operador = "-"
+    //     res1 = (Number(res1) - Number(res));
+    //     res = ""
+    //     document.getElementById("visor").innerHTML = "";
+    //     alert(res1);
         
-    }
-    if (clicar == "=") {
-        document.getElementById("visor").innerHTML = res1;
-    }
+    // }
+    // if (clicar == "=") {
+    //     document.getElementById("visor").innerHTML = res1;
+    // }
+}
 
 
+function operacoes(clicar){
+    if(clicar == "+") {    // Adição
+        operador = "+"
+        resoperador = (Number(res) + Number(resoperador))
+        res = ""
+        document.getElementById("visor").innerHTML = "+";
+        console.log(res);
+        console.log(resoperador);
+        // -------------------------------------------------------------------------
+    }
+    if(clicar == "-") {   // Subtração
+        if(resoperador == 0) {
+            operador = "-"
+            resoperador = (Number(res))
+            res = ""
+        } else {
+            operador = "-"
+            resoperador = (Number(resoperador) - Number(res))
+            res = ""
+        }
+        // -------------------------------------------------------------------------
+    }
+
+}
+
+function resultadofim(clicar){
+    if(clicar == "=" && operador == "+") {  // Adição
+        operador = ""
+        resfinal = (Number(res) + Number(resoperador))
+        resoperador = resfinal
+        res = ""
+        document.getElementById("visor").innerHTML = resfinal;
+    }
+    // -------------------------------------------------------------------------
+    if(clicar == "=" && operador == "-") {  // Subtração
+        operador = ""
+        resfinal = (Number(resoperador) - Number(res))
+        resoperador = resfinal
+        res = ""
+        document.getElementById("visor").innerHTML = resfinal;
+    }
+    // -------------------------------------------------------------------------
 }

@@ -18,26 +18,26 @@
             <p id="visor"></p>
         </div>
         <div class="meubutao">
-            <button id="b%" onclick="clickbotao(this.value);"value="%">%</button>
-            <button id="bce" onclick="limpa(this.value);"value="CE">CE</button>
-            <button id="bc" onclick="limpa(this.value);"value="C">C</button>
-            <button id="bapaga" onclick="limpa(this.value);"value="limpar"><-</button>
-            <button id="b7" onclick="clickbotao(this.value);"value="7">7</button>
-            <button id="b8" onclick="clickbotao(this.value);"value="8">8</button>
-            <button id="b9" onclick="clickbotao(this.value);"value="9">9</button>
-            <button id="bx" onclick="clickbotao(this.value);"value="*">*</button>
-            <button id="b4" onclick="clickbotao(this.value);"value="4">4</button>
-            <button id="b5" onclick="clickbotao(this.value);"value="5">5</button>
-            <button id="b6" onclick="clickbotao(this.value);"value="6">6</button>
-            <button id="b-" onclick="clickbotao(this.value);"value="-">-</button>
-            <button id="b1" onclick="clickbotao(this.value);"value="1">1</button>
-            <button id="b2" onclick="clickbotao(this.value);"value="2">2</button>
-            <button id="b3" onclick="clickbotao(this.value);"value="3">3</button>
-            <button id="b+" onclick="clickbotao(this.value);"value="+">+</button>
-            <button id="b0" onclick="clickbotao(this.value);"value="0">0</button>
-            <button id="b," onclick="clickbotao(this.value);"value=",">,</button>
-            <button onclick="telavisao()">Log</button>
-            <button id="b=" onclick="clickbotao(this.value);"value="=">=</button>
+            <button id="b%" class="operador" onclick="(this.value);"value="%">%</button> <!--arrumar função-->
+            <button id="bce" class="func" onclick="limpa(this.value);"value="CE">CE</button>
+            <button id="bc" class="func" onclick="limpa(this.value);"value="C">C</button>
+            <button id="bapaga" class="func" onclick="limpa(this.value);"value="limpar"><-</button>
+            <button id="b7" class="number" onclick="numericos(this.value);"value="7">7</button>
+            <button id="b8" class="number" onclick="numericos(this.value);"value="8">8</button>
+            <button id="b9" class="number" onclick="numericos(this.value);"value="9">9</button>
+            <button id="bx" class="operador" onclick="(this.value);"value="*">*</button> <!--arrumar função-->
+            <button id="b4" class="number" onclick="numericos(this.value);"value="4">4</button>
+            <button id="b5" class="number" onclick="numericos(this.value);"value="5">5</button>
+            <button id="b6" class="number" onclick="numericos(this.value);"value="6">6</button>
+            <button id="b-" class="operador" onclick="operacoes(this.value);"value="-">-</button> <!--arrumar função-->
+            <button id="b1" class="number" onclick="numericos(this.value);"value="1">1</button>
+            <button id="b2" class="number" onclick="numericos(this.value);"value="2">2</button>
+            <button id="b3" class="number" onclick="numericos(this.value);"value="3">3</button>
+            <button id="b+" class="operador" onclick="operacoes(this.value);"value="+">+</button> <!--arrumar função-->
+            <button id="b0" class="number" onclick="numericos(this.value);"value="0">0</button>
+            <button id="b," class="number" onclick="numericos(this.value);"value=",">,</button>
+            <button  class="func" onclick="telavisao()">Log</button>
+            <button id="b=" class="operador" onclick="resultadofim(this.value);"value="=">=</button> <!--arrumar função-->
         </div>
     </div>
 
