@@ -2,6 +2,7 @@
 let res = ""
 let resoperador = 0
 let resfinal = 0
+let operador = ""
 
 
 function sleep(ms) {    // Função que chama o sleep
@@ -96,28 +97,73 @@ function numericos(clicar) {
 
 function operacoes(clicar){
     if(clicar == "+") {    // Adição
-        operador = "+"
-        resoperador = (Number(res) + Number(resoperador))
-        res = ""
-        document.getElementById("visor").innerHTML = "+";
-        console.log(res);
-        console.log(resoperador);
+        if(operador == "-") {
+            resoperador = (Number(resoperador) - Number(res))
+            document.getElementById("visor").innerHTML = "+";
+            operador = "+"
+            res = ""
+        }
+        // if(operador == "/") {
+        //     resoperador = (Number(res) / Number(resoperador)) 
+        //     document.getElementById("visor").innerHTML = "+";
+        //     operador = "+"
+        //     res = ""
+        // }
+        // if(operador == "*") {
+        //     resoperador = (Number(res) * Number(resoperador)) 
+        //     document.getElementById("visor").innerHTML = "+";
+        //     operador = "+"
+        //     res = ""
+        // }
+        else{
+            operador = "+"
+            resoperador = (Number(res) + Number(resoperador))
+            res = ""
+            document.getElementById("visor").innerHTML = "+";
+            console.log(res);
+            console.log(resoperador);
+        }
         // -------------------------------------------------------------------------
     }
     if(clicar == "-") {   // Subtração
+        if(operador == "+") {
+            resoperador = (Number(res) + Number(resoperador)) 
+            document.getElementById("visor").innerHTML = resoperador;
+            operador = "-"
+            res = ""
+        }
+        // if(operador == "*") {
+        //     resoperador = (Number(res) * Number(resoperador)) 
+        //     document.getElementById("visor").innerHTML = "-";
+        //     operador = "*"
+        //     res = ""
+        // }
+        // if(operador == "/") {
+        //     resoperador = (Number(res) / Number(resoperador)) 
+        //     document.getElementById("visor").innerHTML = "-";
+        //     operador = "/"
+        //     res = ""
+        // }
         if(resoperador == 0) {
             operador = "-"
             resoperador = (Number(res))
+            document.getElementById("visor").innerHTML = "-";
             res = ""
         } else {
             operador = "-"
             resoperador = (Number(resoperador) - Number(res))
+            document.getElementById("visor").innerHTML = "-";
             res = ""
         }
         // -------------------------------------------------------------------------
     }
 
 }
+
+
+
+                                            // Funão que controla apenas o botão de "IGUAL"
+
 
 function resultadofim(clicar){
     if(clicar == "=" && operador == "+") {  // Adição
