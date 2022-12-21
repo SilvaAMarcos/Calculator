@@ -93,10 +93,10 @@ function operacoes(clicar){
         //     res = ""
         // }
         if(operador == "*") {
-            resoperador = (Number(res) * Number(resoperador)) 
+            res = (Number(res) * Number(resoperador)) 
             document.getElementById("visor").innerHTML = "+";
             operador = "+"
-            res = ""
+            resoperador = ""
         }
         else{
             operador = "+"
@@ -141,13 +141,13 @@ function operacoes(clicar){
     if(clicar == "*") {    // multiplicação
         if(operador == "-") {
             res = (Number(resoperador) - Number(res)) 
-            document.getElementById("visor").innerHTML = resoperador;
+            document.getElementById("visor").innerHTML = "*";
             operador = "*"
             resoperador = ""
         }
         if(operador == "+") {
             res = (Number(res) + Number(resoperador)) 
-            document.getElementById("visor").innerHTML = resoperador;
+            document.getElementById("visor").innerHTML = "*";
             operador = "*"
             resoperador = ""
         }
