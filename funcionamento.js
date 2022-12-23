@@ -163,6 +163,11 @@ function operacoes(clicar){
             document.getElementById("visor").innerHTML = "*";
             res = ""
         }
+        if(res == ""){
+            res = res
+            operador = "*"
+            document.getElementById("visor").innerHTML = "*"
+        }
         else{
             operador = "*"
             resoperador = (Number(res) * Number(resoperador))
