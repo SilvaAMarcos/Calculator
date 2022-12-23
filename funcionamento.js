@@ -69,7 +69,7 @@ function numericos(clicar) {
         res = res + b9
         document.getElementById("visor").innerHTML = res;}
     if (clicar == ",") {
-        bdecimal = ",";
+        bdecimal = ".";
         res = res + bdecimal
         document.getElementById("visor").innerHTML = res;}
 
@@ -218,6 +218,43 @@ function operacoes(clicar){
 
     } // -------------------------------------------------------------------------
 
+    if(clicar == "%") {    // Porcentagem
+        if(operador == "-") {
+            res = (Number(resoperador) - Number(res)) 
+            document.getElementById("visor").innerHTML = "%";
+            operador = "%"
+            resoperador = ""
+        }
+        if(operador == "+") {
+            res = (Number(res) + Number(resoperador)) 
+            document.getElementById("visor").innerHTML = "%";
+            operador = "%"
+            resoperador = ""
+        }
+        if(operador == "/") {
+            res = (Number(resoperador) / Number(res))
+            document.getElementById("visor").innerHTML = "%";
+            operador = "%"
+            resoperador = ""
+        }
+        if(clicar == "*" && resoperador == 0) {
+            operador = "*"
+            resoperador = Number(res)
+            document.getElementById("visor").innerHTML = "%";
+            res = ""
+        }
+        if(res == ""){
+            res = res
+            operador = "%"
+            document.getElementById("visor").innerHTML = "%"
+        }
+        else{
+            operador = "%"
+            resoperador = (Number(resoperador) * (Number(res) / 100))
+            res = ""
+            document.getElementById("visor").innerHTML = "%";
+        }
+    }
 }
 
 
@@ -260,5 +297,12 @@ function resultadofim(){
         res = ""
         document.getElementById("visor").innerHTML = resfinal;
     }
-
+    // -------------------------------------------------------------------------
+    if(operador == "%") {  // Porcentagem
+        operador = ""
+        resfinal = Number(resoperador)
+        res = ""
+        document.getElementById("visor").innerHTML = resfinal;
+    }
+    // -------------------------------------------------------------------------
 }
