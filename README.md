@@ -17,6 +17,6 @@ O projeto está com Bootstrap incluído.
 O código é aberto à todos, porém fazer a declaração do autor.
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/102332801/209341822-15bac64f-15b6-4540-a708-946c4b14e75c.PNG" width="500px"> 
+<img src="https://user-images.githubusercontent.com/102332801/209377062-394d4639-563d-4056-9d94-71382e5b04c1.PNG" width="400px"> 
 
 </div>
