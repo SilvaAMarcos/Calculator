@@ -86,12 +86,12 @@ function operacoes(clicar){
             operador = "+"
             res = ""
         }
-        // if(operador == "/") {
-        //     resoperador = (Number(res) / Number(resoperador)) 
-        //     document.getElementById("visor").innerHTML = "+";
-        //     operador = "+"
-        //     res = ""
-        // }
+        if(operador == "/") {
+            resoperador = (Number(resoperador) / Number(res)) 
+            document.getElementById("visor").innerHTML = "+";
+            operador = "+"
+            res = ""
+        }
         if(operador == "*") {
             res = (Number(res) * Number(resoperador)) 
             document.getElementById("visor").innerHTML = "+";
@@ -116,15 +116,15 @@ function operacoes(clicar){
         if(operador == "*") {
             resoperador = (Number(res) * Number(resoperador)) 
             document.getElementById("visor").innerHTML = "-";
-            operador = "*"
+            operador = "-"
             res = ""
         }
-        // if(operador == "/") {
-        //     resoperador = (Number(res) / Number(resoperador)) 
-        //     document.getElementById("visor").innerHTML = "-";
-        //     operador = "-"
-        //     res = ""
-        // }
+        if(operador == "/") {
+            resoperador = (Number(resoperador) / Number(res)) 
+            document.getElementById("visor").innerHTML = "-";
+            operador = "-"
+            res = ""
+        }
         if(resoperador == 0) {
             operador = "-"
             resoperador = (Number(res))
@@ -151,12 +151,12 @@ function operacoes(clicar){
             operador = "*"
             resoperador = ""
         }
-        // if(operador == "/") {
-        //     resoperador = (Number(res) / Number(resoperador)) 
-        //     document.getElementById("visor").innerHTML = "/";
-        //     operador = "/"
-        //     res = ""
-        // }
+        if(operador == "/") {
+            res = (Number(resoperador) / Number(res))
+            document.getElementById("visor").innerHTML = "*";
+            operador = "*"
+            resoperador = ""
+        }
         if(clicar == "*" && resoperador == 0) {
             operador = "*"
             resoperador = Number(res)
@@ -170,7 +170,48 @@ function operacoes(clicar){
             document.getElementById("visor").innerHTML = "*";
         }
     
-    }
+    } // -------------------------------------------------------------------------
+
+    if(clicar == "/"){      // Divisão
+        if(operador == "+"){
+            resoperador = (Number(res) + Number(resoperador))
+            document.getElementById("visor").innerHTML = "/"
+            operador = "/"
+            res = ""
+
+        }
+        if(operador == "-") {
+            resoperador = (Number(resoperador) - Number(res))
+            document.getElementById("visor").innerHTML = "*"
+            operador = "/"
+            res = ""
+        }
+        if(operador == "*") {
+            res = (Number(res) * Number(resoperador));
+            document.getElementById("visor").innerHTML = "/"
+            operador = "/"
+            resoperador = ""
+        }
+        if(clicar == "/" && resoperador == 0) {
+            operador = "/"
+            resoperador = Number(res)
+            document.getElementById("visor").innerHTML = "/"
+            res = ""
+        }
+        if(res == ""){
+            res = res
+            operador = "/"
+            document.getElementById("visor").innerHTML = "/"
+        }
+        else{
+            operador = "/"
+            resoperador = ((Number(resoperador) / Number(res)))
+            res = ""
+            document.getElementById("visor").innerHTML = "/"
+            console.log(resoperador);
+        }
+
+    } // -------------------------------------------------------------------------
 
 }
 
@@ -179,11 +220,11 @@ function operacoes(clicar){
 
 
 
-                                            // Funão que controla apenas o botão de "IGUAL"
+                                 // Funão que controla apenas o botão de "IGUAL"
 
 
-function resultadofim(clicar){
-    if(clicar == "=" && operador == "+") {  // Adição
+function resultadofim(){
+    if(operador == "+") {  // Adição
         operador = ""
         resfinal = (Number(res) + Number(resoperador))
         resoperador = resfinal
@@ -191,7 +232,7 @@ function resultadofim(clicar){
         document.getElementById("visor").innerHTML = resfinal;
     }
     // -------------------------------------------------------------------------
-    if(clicar == "=" && operador == "-") {  // Subtração
+    if(operador == "-") {  // Subtração
         operador = ""
         resfinal = (Number(resoperador) - Number(res))
         resoperador = resfinal
@@ -199,11 +240,20 @@ function resultadofim(clicar){
         document.getElementById("visor").innerHTML = resfinal;
     }
     // -------------------------------------------------------------------------
-    if(clicar == "=" && operador == "*") {  // multiplicação
+    if(operador == "*") {  // multiplicação
         operador = ""
         resfinal = (Number(res) * Number(resoperador))
         res = resfinal
         resoperador = ""
         document.getElementById("visor").innerHTML = resfinal;
     }
+    // -------------------------------------------------------------------------
+    if(operador == "/") {  // Divisao
+        operador = ""
+        resfinal = ((Number(resoperador) / Number(res)))
+        resoperador = resfinal;
+        res = ""
+        document.getElementById("visor").innerHTML = resfinal;
+    }
+
 }
