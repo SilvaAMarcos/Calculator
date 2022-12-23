@@ -1,7 +1,10 @@
 # Calculator
 A calculator create in JavaScript puro
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/102332801/209348160-c6597244-08c7-4d23-97ed-b3811c64627f.gif" width="500px"> 
 
+</div>
 
 Cada botão é independente e cada função tambem é independente.
 Para cada operador, existe uma validação propria e especifica, com hierarquia de validação própria.
